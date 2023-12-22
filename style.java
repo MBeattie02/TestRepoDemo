@@ -24,6 +24,9 @@ public class styleViolations {
         // Variable not following camelCase
         int UserAge = 25;
 
+        // Incorrectly named variable (should be in camelCase)
+        int incorrect_variable_name = 30;
+
         // More magic numbers
         for (int i = 0; i < 10; i++) {
             System.out.println(i);
@@ -31,7 +34,7 @@ public class styleViolations {
     }
 
     // Incorrectly named interface
-    interface badInterfaceName {
-        void doSomething();
-    }
+interface badInterfaceName {
+void doSomething();
+}
 }
