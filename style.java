@@ -33,8 +33,13 @@ public class styleViolations {
         }
     }
 
+    public void anotherMethod() {
+      System.out.println("Incorrect indentation here."); // Incorrectly indented
+        System.out.println("Correct indentation."); // Correctly indented
+    }
+
     // Incorrectly named interface
-interface badInterfaceName {
-void doSomething();
-}
+    interface badInterfaceName {
+        void doSomething();
+    }
 }
