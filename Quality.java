@@ -21,25 +21,16 @@ public class CombinedIssues {
     }
 
 
-    // Refactor suggestion: Convert loops to stream operations
-    public void processList(List<String> items) {
-        // This loop can be refactored to a stream operation
-        items.forEach(System.out::println);
-
-        // This loop also can be refactored to a stream operation
-        items.stream()
-             .filter(item -> item.length() > 3)
-             .forEach(this::processItem);
-
-        // This loop is more complex and might not be easily refactored
-        for (String item : items) {
-            if (item.length() > 3) {
-                processItem(item);
-            } else {
-                handleShortItem(item);
-            }
+    List<String> items = Arrays.asList("apple", "banana", "cherry");
+    int[] count = new int[1]; // External mutable state
+    
+    for (String item : items) {
+        if (item.length() > 5) {
+            System.out.println(item);
+            count[0]++; // Modifies external state based on condition
         }
     }
+
 
     private void processItem(String item) {
         // Some processing on the item
