@@ -8,15 +8,15 @@ import java.util.List;
 public class styleViolations {
 
     // Constant not in uppercase
-    public final int MAX_COUNT = 10;
+    public final int max_count = 10;
 
     // Method name starting with uppercase
     public void CheckStyle() {
-        // Magic number usage
+        
         int threshold = 5;
 
         // Incorrect brace style
-        if (threshold < MAX_COUNT)
+        if (threshold < max_count)
         {
             System.out.println("Threshold is less than max");
         }
